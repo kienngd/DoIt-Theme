@@ -2,3 +2,44 @@
 // Custom style
 // 自定义样式
 // ==============================
+/* @media only screen and (max-width: 1440px) {
+    .single-post {
+      width: calc(78% - 30px) !important;
+      margin-left: 20px;
+    }
+    .page {
+      width: 92%;
+      margin-left: 20px;
+    }
+    #toc-auto_bak {
+      left: 78%;
+      width: 22%;
+    }
+  } */
+
+/* @media only screen and (max-width: 1024px) {
+  .single-post {
+    width: 96% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .page {
+    width: 96% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+
+  #header-desktop .header-wrapper {
+    padding-left: 1rem;
+  }
+} */
+
+/* .content {
+    margin-top: 30px;
+} */
+
+.single-title a, .single-title, .header-title a {
+    color: $single-title-color;
+}
