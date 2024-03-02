@@ -2,20 +2,33 @@
 // Custom style
 // 自定义样式
 // ==============================
-/* @media only screen and (max-width: 1440px) {
-    .single-post {
-      width: calc(78% - 30px) !important;
-      margin-left: 20px;
-    }
+@media only screen and (max-width: 2440px) {
     .page {
-      width: 92%;
-      margin-left: 20px;
+      width: 98%;
+      // margin-left: 15px;
+      // max-width: calc(78% - 30px);
+      max-width: calc(100% - 30px);
     }
-    #toc-auto_bak {
+
+    .home > .single {
+      width: calc(100% - 30px);
+      margin-left: 15px;
+    }
+
+    .container > .single {
+      width: calc(78% - 30px);
+      margin-left: 15px;
+    }
+
+    // .home {
+    //   width: calc(100% - 30px);
+    //   margin-left: 15px;
+    // }
+    /* #toc-auto {
       left: 78%;
       width: 22%;
-    }
-  } */
+    } */
+  }
 
 /* @media only screen and (max-width: 1024px) {
   .single-post {
@@ -42,4 +55,12 @@
 
 .single-title a, .single-title, .header-title a {
     color: $single-title-color;
+}
+
+@media only screen and (max-width: 1000px) {
+  .page {
+    width: 90% !important;
+    // margin-left: auto !important;
+    // margin-right: auto !important;
+  }
 }
