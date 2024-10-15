@@ -1,9 +1,22 @@
 {{- $cdn := .Scratch.Get "cdn" | default dict -}}
 {{- $fingerprint := .Scratch.Get "fingerprint" -}}
-{{- $comment := .Scratch.Get "comment" | default dict -}}
+{{- $comment := (.Scratch.Get "params").comment | default dict -}}
 {{- $commentConfig := dict -}}
 
 {{- if $comment.enable -}}
+    {{- /* Disqus Comment System */ -}}
+    {{- $cusdis := $comment.cusdis | default dict -}}
+    {{- if $cusdis.enable -}}
+    <!-- Comments by Cusdis -->
+    <div>
+        <div id="cusdis_thread" data-host="https://cusdis.com"
+            data-app-id="{{ printf $cusdis.appId }}"
+            data-page-id="{{ .File.UniqueID }}" data-page-url="{{ .Permalink }}"
+            data-page-title="{{ .Title }}"></div>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+    </div>
+    {{- end -}}
+
     <div id="comments">
         {{- /* Disqus Comment System */ -}}
         {{- $disqus := $comment.disqus | default dict -}}
