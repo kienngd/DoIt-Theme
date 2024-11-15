@@ -13,7 +13,7 @@
                 ) -}}
                     {{- if gt $i 0 }}, {{ end -}}
                     <a href='{{ .link | absURL }}'>{{- .name -}}</a>
-                    &nbsp;<a href=''>{{- .email -}}</a>
+                    &nbsp;<a href='mailto: {{- .email -}}'>{{- .email -}}</a>
                 {{- end -}}
             {{- else -}}
                 {{- with partial "function/author.html" (dict
@@ -22,7 +22,7 @@
                 ) -}}
                     {{- if gt $i 0 }}, {{ end -}}
                     <a href='{{ .link | absURL }}'>{{- .name -}}</a>
-                    &nbsp;<a href=''>{{- .email -}}</a>
+                    &nbsp;<a href='mailto: {{- .email -}}'>{{- .email -}}</a>
                 {{- end -}}
             {{- end -}}
         {{- end -}}
