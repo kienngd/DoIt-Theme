@@ -45,6 +45,7 @@
                 {{- /* Author */ -}}
                 {{- if ne .Site.Params.footer.author false -}}
                     <span class="author" itemprop="copyrightHolder">&nbsp;<a href="{{ $.Site.Author.link | default .Site.Home.RelPermalink }}" target="_blank" rel="noopener noreferrer">{{ .Site.Author.name }}</a></span>
+                    &nbsp;<span class="author" itemprop="copyrightHolder"><a href="mailto:kienngd@gmail.com">kienngd@gmail.com</a></span>
                 {{- end -}}
 
                 {{- /* License */ -}}
